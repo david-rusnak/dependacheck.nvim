@@ -118,7 +118,7 @@ require("dependacheck").setup()
 
 ## Requirements
 
-- Neovim 0.7+ (for extmark API)
+- Neovim 0.8+ (for extmark API)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - Internet connection (for crates.io API access)
 

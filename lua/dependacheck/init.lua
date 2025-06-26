@@ -1,6 +1,6 @@
 -- ~/.config/nvim/lua/dependacheck/init.lua
 local M = {}
-local util = require("util")
+local util = require("dependacheck.util")
 
 -- create a namespace for virtual text
 local ns = vim.api.nvim_create_namespace("Dependacheck")
@@ -10,12 +10,7 @@ local function clear_annotations(bufnr)
 end
 
 --- Setup function: registers command and autocmds
---- @param opts table? Optional config table
-function M.setup(opts)
-  opts = opts or {}
-  print("Dependacheck setup called with options:", opts)
-
-  -- user command to force a check
+function M.setup() -- user command to force a check
   vim.api.nvim_create_user_command("Dependacheck", function()
     M.check_updates()
   end, {})
